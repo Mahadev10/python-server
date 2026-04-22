@@ -16,7 +16,7 @@ jobs:
             - name: checkout code
               uses: actions/checkout@v6
             - name: Deploying server
-              run: python3 server.py
+              run: python3 server.py &
             - name: testing code
               run: python3 test_server.py
     deploy:
