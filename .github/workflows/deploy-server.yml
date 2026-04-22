@@ -1,0 +1,28 @@
+name: Deploy python app
+on: push
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - name: code checkout
+              uses: actions/checkout@v6
+            - name: printing files
+              run: ls
+            - name: Building code
+              run: echo "Building code"
+    test:
+        runs-on: ubuntu-latest
+        steps:
+            - name: checkout code
+              uses: actions/checkout@v6
+            - name: testing code
+              run: python3 test_server.py
+    deploy:
+        runs-on: ubuntu-latest
+        steps:
+            - name: code-checkout
+              uses: actions/checkout@v6
+            - name: printing-files
+              run: ls
+            - name: Deploying server
+              run: echo "Deploying......... server"
